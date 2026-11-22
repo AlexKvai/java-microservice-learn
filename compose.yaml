@@ -1,0 +1,21 @@
+services:
+  kafka:
+    image: apache/kafka:4.1.2
+    ports:
+      - "9092:9092"
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+  notificator-db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: notificator
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5434:5432"
+    volumes:
+      - notificator_pg:/var/lib/postgresql/data
+volumes:
+  notificator_pg:

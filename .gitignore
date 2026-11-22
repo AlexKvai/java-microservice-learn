@@ -1,0 +1,25 @@
+# Java and Maven
+**/target/
+*.class
+*.log
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.classpath
+.project
+
+# Local credentials / config
+.env
+.env.*
+!.env.example
+**/application-local.properties
+**/application-prod.properties
+
+# OS
+.DS_Store
+Thumbs.db
